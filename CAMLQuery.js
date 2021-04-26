@@ -19,7 +19,7 @@ function getItems(){
 			document.getElementById("Title").innerHTML = htmlVal;
 		},
 		error: function(error) {
-			console.log("fnGetReviewerName :: " + error);
+			console.log("getItems :: " + error);
 		}
 	});
 }
