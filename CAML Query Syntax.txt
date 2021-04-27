@@ -1,0 +1,69 @@
+SharePoint CAML Query Example
+
+Get results from SharePoint List where Id > 1
+<Query>
+	<Where>
+		<Gt>
+			<FieldRef Name=’ID’ />
+			<Value Type=’Counter’>11</Value>
+		</Gt>
+	</Where>
+</Query>
+
+Get results from SharePoint List where Title is not equal to RAM
+<Query>
+	<Where>
+		<Neq>
+			<FieldRef Name=’Title’ />
+			<Value Type=’Text’>RAM</Value>
+		</Neq>
+	</Where>
+</Query>
+
+Get results from SharePoint List where Title begins with RAM
+<Query>
+	<Where>
+		<BeginsWith>
+			<FieldRef Name=’Title’ />
+			<Value Type=’Text’>RAM</Value>
+		</BeginsWith>
+	</Where>
+</Query>
+
+Get results from SharePoint List where Title contains RAM
+<Query>
+	<Where>
+		<Contains>
+			<FieldRef Name=’Title’ />
+			<Value Type=’Text’>RAM</Value>
+		</Contains>
+	</Where>
+</Query>
+
+Get results from SharePoint List where Id Lower than or equal to 23
+<Query>
+	<Where>
+		<Leq>
+			<FieldRef Name=’ID’ />
+			<Value Type=’Counter’>23</Value>
+		</Leq>
+	</Where>
+</Query>
+
+Get results from SharePoint List where Title is not null
+<Query>
+	<Where>
+		<IsNotNull>
+			<FieldRef Name=’Title’ />
+		</IsNotNull>
+	</Where>
+</Query>
+
+CAML Query to Limit Row
+
+<Query>
+	<View>
+		<RowLimit>10</RowLimit>
+	</View>
+</Query>
+
